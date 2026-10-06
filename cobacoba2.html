@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Bakery</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #fff8f2;
+            color: #4a3025;
+        }
+
+        /* Navbar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 8%;
+            background: #6b4030;
+            color: white;
+        }
+
+        nav h2 {
+            margin: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        nav a:hover {
+            color: #ffd6b8;
+        }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 70px 20px;
+            background: #f7d8c3;
+        }
+
+        .hero h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            margin-bottom: 25px;
+        }
+
+        .button {
+            background: #6b4030;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background: #4a2b20;
+        }
+
+        /* Produk */
+        .section {
+            width: 85%;
+            max-width: 1000px;
+            margin: 45px auto;
+            text-align: center;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px #ddd;
+        }
+
+        .card h3 {
+            margin-top: 0;
+        }
+
+        .price {
+            color: #a05235;
+            font-weight: bold;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            transition: 0.3s;
+        }
+
+        /* Form */
+        form {
+            max-width: 600px;
+            margin: auto;
+            display: grid;
+            gap: 12px;
+            text-align: left;
+        }
+
+        input, select, textarea {
+            padding: 12px;
+            border: 1px solid #c9a99a;
+            border-radius: 7px;
+            font-family: inherit;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #6b4030;
+        }
+
+        button {
+            padding: 12px;
+            border: none;
+            border-radius: 7px;
+            background: #6b4030;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #4a2b20;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #6b4030;
+            color: white;
+            margin-top: 40px;
+        }
+
+        /* Responsive */
+        @media (max-width: 700px) {
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .products {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <h2>Sweet Bakery</h2>
+
+        <div>
+            <a href="#">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#pesan">Pesan</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>Manis untuk Setiap Momen</h1>
+        <p>Nikmati berbagai pilihan kue lezat yang dibuat dengan penuh cinta.</p>
+        <a href="#menu" class="button">Lihat Menu</a>
+    </section>
+
+    <!-- Menu -->
+    <section class="section" id="menu">
+        <h2>Menu Favorit</h2>
+
+        <div class="products">
+
+            <div class="card">
+                <h3>Chocolate Cake</h3>
+                <p>Kue cokelat lembut dengan rasa yang manis dan nikmat.</p>
+                <p class="price">Rp35.000</p>
+            </div>
+
+            <div class="card">
+                <h3>Strawberry Cake</h3>
+                <p>Kue lembut dengan krim dan rasa strawberry segar.</p>
+                <p class="price">Rp40.000</p>
+            </div>
+
+            <div class="card">
+                <h3>Cheese Cake</h3>
+                <p>Cheese cake lembut dengan rasa keju yang creamy.</p>
+                <p class="price">Rp45.000</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Form Pesanan -->
+    <section class="section" id="pesan">
+        <h2>Pesan Kue</h2>
+
+        <form>
+            <label>Nama</label>
+            <input type="text" placeholder="Masukkan nama">
+
+            <label>Pilih Kue</label>
+            <select>
+                <option>Chocolate Cake</option>
+                <option>Strawberry Cake</option>
+                <option>Cheese Cake</option>
+            </select>
+
+            <label>Jumlah</label>
+            <input type="number" placeholder="Masukkan jumlah">
+
+            <label>Catatan</label>
+            <textarea placeholder="Tambahkan catatan pesanan"></textarea>
+
+            <button type="submit">Pesan Sekarang</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Sweet Bakery</p>
+    </footer>
+
+</body>
+</html>
